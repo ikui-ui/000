@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DPlayer 视频播放网站</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/dplayer/dist/DPlayer.min.css">
+</head>
+<body>
+  <h1>欢迎使用 DPlayer 播放视频</h1>
+  <div id="dplayer" style="max-width: 800px; margin: 0 auto;"></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/dplayer/dist/DPlayer.min.js"></script>
+  <script>
+    const dp = new DPlayer({
+      container: document.getElementById('dplayer'),
+      autoplay: false,
+      theme: '#FADFA3',
+      video: {
+        url: 'https://www.w3schools.com/html/mov_bbb.mp4',
+        pic: 'https://www.w3schools.com/html/img_girl.jpg',
+      },
+      danmaku: {
+        id: 'demo',
+        api: 'https://api.prprpr.me/dplayer/',
+      },
+    });
+  </script>
+</body>
+</html>
